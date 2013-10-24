@@ -5,7 +5,7 @@ gem 'inherited_resources'
 gem 'jquery-rails'
 
 gem 'devise'
-gem 'typus', :git => 'git://github.com/typus/typus.git'
+gem 'typus', :git => 'https://github.com/fesplugas/typus.git', :tag => 'v3.0.10'
 
 gem 'carrierwave'
 gem 'slim'

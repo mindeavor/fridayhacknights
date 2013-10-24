@@ -1,11 +1,11 @@
 GIT
-  remote: git://github.com/typus/typus.git
-  revision: 4ce814b8ee1e1f3bca7d400fa7787ccc35ad5a96
+  remote: https://github.com/fesplugas/typus.git
+  revision: 4cda4a1c89f85eca28d657dea6afa85d0a4a444c
+  tag: v3.0.10
   specs:
-    typus (3.0.11.rc5)
+    typus (3.0.10)
       bcrypt-ruby
       fastercsv (~> 1.5)
-      rails (~> 3.0.8)
       render_inheritable
       will_paginate (~> 3.0.pre2)
 
@@ -56,7 +56,7 @@ GEM
       warden (~> 1.0.3)
     erubis (2.6.6)
       abstract (>= 1.0.0)
-    fastercsv (1.5.4)
+    fastercsv (1.5.5)
     fssm (0.2.7)
     has_scope (0.5.1)
     httparty (0.7.8)
@@ -117,7 +117,7 @@ GEM
     tzinfo (0.3.29)
     warden (1.0.5)
       rack (>= 1.0)
-    will_paginate (3.0.0)
+    will_paginate (3.0.5)
     xml-simple (1.1.0)
 
 PLATFORMS
