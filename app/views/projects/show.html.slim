@@ -21,24 +21,9 @@
           h3 Recent Activity:
           - @project.checkins.each do |checkin|
             .checkin class=cycle('l-col','r-col')
-              .description
-                .content = checkin_description checkin
-                '
-                .sig
-                  em.name
-                    ' &mdash;
-                    = link_to checkin.hacker.name, hacker_path(checkin.hacker)
-                    '
-                  span.date == checkin.created_at.to_date.to_s(:rfc822).gsub ' ', '&nbsp;'
-              - if checkin.event == Event.current && (checkin.hacker == current_hacker || @hacker_is_owner)
-
-                = form_tag check_out_path, :method => 'delete', :class => 'admin' do
-                  input type="button" name="edit_checkin" value="Edit Description"
-                  input.warning type="submit" name="delete_checkin" value="Delete"
-
-                  input type="hidden" name="hacker_id" value=checkin.hacker.id
+              = render 'projects/checkin', :checkin => checkin
           .clear
-      
+
       - if hacker_signed_in?
         .divider
         .checkin-input-wrap
@@ -50,9 +35,9 @@
             input.lfloat type="submit" value="Check In"
 
             input type="hidden" name="hacker_id" value=current_hacker.id
-    
+
     .light-box.bp.grid_3
-      
+
       - if @project.website.present?
         .website
           h3 Website:

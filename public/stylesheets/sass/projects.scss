@@ -6,6 +6,29 @@
   padding-bottom: 20px;
 }
 
+.project {
+  .checkin {
+    @include rounded;
+    @include mild-box;
+    padding: 8px;
+    width: 45%;
+    float: left;
+    margin-bottom: 3%;
+    .admin {
+      text-align: right;
+      input[name=delete_checkin] {
+        color: #fff;
+        text-shadow: #333 0 1px 1px;
+
+        // taken from http://www.colorzilla.com/gradient-editor/ :3
+        background: #ff3019;
+        background: -moz-linear-gradient(top, #ff3019 0%, #cf0404 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404));
+      }
+    }
+  }
+}
+
 .project.light-box {
   margin: 1em 0em 1em 0em;
 	padding: 20px;
@@ -52,14 +75,6 @@
 
   .activity {
     padding-left: 10px;
-    .checkin {
-      @include rounded;
-      @include mild-box;
-      padding: 8px;
-      width: 45%;
-      float: left;
-      margin-bottom: 3%;
-    }
     .checkin.l-col { margin-right: 3%; }
 
     .description {
@@ -67,19 +82,6 @@
       .name { font-size: 0.8em; }
       .name a { text-decoration: none; }
       .date { font-size: 0.6em; font-family: $header-font; color: $soft-text; }
-    }
-
-    .admin {
-      text-align: right;
-      input[name=delete_checkin] {
-        color: #fff;
-        text-shadow: #333 0 1px 1px;
-
-        // taken from http://www.colorzilla.com/gradient-editor/ :3
-        background: #ff3019;
-        background: -moz-linear-gradient(top, #ff3019 0%, #cf0404 100%);
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404));
-      }
     }
   }
 
