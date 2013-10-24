@@ -7,7 +7,6 @@
 
   - @projects.each do |project|
     .project.light-box
-
       h2 = link_to project.name, project_path(project)
       .description #{project.description}
 
@@ -19,4 +18,3 @@
         .divider
         = hacker_list project.hackers_involved
         .clear
-

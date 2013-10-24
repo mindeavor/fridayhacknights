@@ -1,6 +1,6 @@
 Fridayhacknights::Application.routes.draw do
   resources :badges
-  
+
   root :to => 'home#index'
 
   post "projects/:id/checkin" => 'projects#check_in', :as => :check_in
@@ -21,7 +21,7 @@ Fridayhacknights::Application.routes.draw do
 
   match 'gallery/:id' => 'gallery#show'
   match 'gallery' => 'gallery#index'
-  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

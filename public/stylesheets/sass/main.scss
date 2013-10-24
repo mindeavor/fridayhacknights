@@ -55,14 +55,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .site-nav {
-	float: left;  
+	float: left;
   font-family: $header-font;
 	padding: 10px 0px 10px 0px;
 	li {
 	  float: left;
 	  list-style: none;
 		margin: 0em 1.5em 0em 0em;
-	}	
+	}
 	ul {
 		margin: 0px 0px 0px 0px;
 		-webkit-padding-start: 0px;
@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
   moz-box-shadow: -8px 0px 8px #000; /* FF3.5 - 3.6 */
   -webkit-box-shadow: 0px 0px 8px #000; /* Saf3.0+, Chrome */
   box-shadow: 0px 0px 8px #000; /* Opera 10.5, IE9, FF4+, Chrome 10+ */;
-  z-index: 2;	
+  z-index: 2;
 }
 
 .banner-image-holder {
@@ -225,7 +225,7 @@ h1, h2, h3, h4, h5, h6 {
 .sp { padding-left: 20px; padding-right: 20px; }
 
 .item-list {
-  padding: 0; 
+  padding: 0;
   list-style: none;
   a {
     text-decoration: none;
