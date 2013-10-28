@@ -35,6 +35,7 @@
             input.lfloat type="submit" value="Check In"
 
             input type="hidden" name="hacker_id" value=current_hacker.id
+            input type="hidden" name="checkin_id" value=""
 
     .light-box.bp.grid_3
 
@@ -55,6 +56,7 @@
     $('input[name=edit_checkin]').live('click', function () {
 
       var hackerId = $(this).siblings('[name=hacker_id]').val()
+        , checkinId = $(this).siblings('[name=checkin_id]').val()
         , text = $(this).parent().siblings('.description').find('.content').text()
         , textarea = $('textarea[name=description]')
         , posY = textarea.offset().top
@@ -64,6 +66,7 @@
         complete: function () {
           textarea.val(text).focus();
           textarea.siblings('[name=hacker_id]').val(hackerId);
+          textarea.siblings('[name=checkin_id]').val(checkinId);
         }
       });
     });

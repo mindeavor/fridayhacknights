@@ -20,8 +20,10 @@ class ProjectsController < InheritedResources::Base
       return show! :alert => 'Invalid project'
     end
 
+    # If the current_hacker owns the project, allow him to edit any checkin
     hacker_id = current_hacker.owns?(project) ? params[:hacker_id] : current_hacker[:id]
 
+    # checkin = Checkin.find params[:checkin_id]
     checkin = Checkin.find_or_create_by_hacker_id_and_event_id_and_project_id(
       hacker_id, Event.current[:id], project[:id]
     )
